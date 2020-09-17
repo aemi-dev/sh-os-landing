@@ -1,28 +1,47 @@
-softwareupdate -lia;
-
+cd ~;
 sudo purge;
-
+sudo periodic daily weekly monthly;
+sudo periodic . daily weekly monthly;
+sudo periodic .. daily weekly monthly;
+sudo purge;
+sudo softwareupdate --reset-ignored;
+sudo softwareupdate -l -d -i -a --force --verbose;
+sudo purge;
+sudo mas upgrade;
+sudo purge;
+brew cleanup -s;
+brew cleanup;
+sudo rm -rfd "$(brew --cache)";
+sudo purge;
 brew update;
 brew upgrade;
-brew cask upgrade;
-brew cask upgrade --greedy;
-
-sudo purge;
-
-brew cleanup;
+brew upgrade --cask;
+brew upgrade --cask --greedy;
 brew cleanup -s;
-rm -rf "$(brew --cache)";
-
+brew cleanup;
+sudo rm -rfd "$(brew --cache)";
+brew update;
+brew upgrade;
+brew upgrade --cask;
+brew cleanup -s;
+brew cleanup;
+sudo rm -rfd "$(brew --cache)";
 sudo purge;
-
+sudo npm cache verify;
+sudo npm cache clean --force;
+sudo npm update;
 sudo npm update -g;
-sudo npm upgrade -g;
-
+sudo npm cache clean --force;
+sudo npm cache verify;
 sudo purge;
-
-pip install --user --upgrade pip;
-
+sudo yarn cache clean;
 sudo purge;
-
-pip freeze | cut -d \= -f 1 | xargs -n1 sudo pip install --user --upgrade;
-pip3 freeze | cut -d \= -f 1 | xargs -n1 sudo pip3 install --user --upgrade;
+rustup update;
+sudo rustup update;
+sudo purge;
+sudo pip3 cache purge;
+pip3 list -o | cut -d \= -f 1 | xargs -n1 sudo -H pip3 install --user --upgrade;
+sudo periodic daily weekly monthly;
+sudo periodic . daily weekly monthly;
+sudo periodic .. daily weekly monthly;
+sudo shutdown -r now;
