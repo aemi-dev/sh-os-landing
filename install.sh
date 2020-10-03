@@ -42,8 +42,11 @@ sudo npm install -g npm eslint nodemon nvm;
 sudo purge;
 
 # Install some basics brew-core
-brew install python ipython ruby rust ocaml bison r gnuplot libomp cairo gnuplot graphviz imagemagick lame jupyterlab open-mpi fish bash;
+brew install python ipython ruby rust ocaml bison r gnuplot libomp cairo gnuplot graphviz imagemagick lame jupyterlab open-mpi fish bash zsh;
 sudo purge;
+sudo echo "/usr/local/bin/fish" >> /etc/shells;
+sudo echo "/usr/local/bin/bash" >> /etc/shells;
+sudo echo "/usr/local/bin/zsh" >> /etc/shells;
 
 #  Install Composer PHP Modules
 composer global require squizlabs/php_codesniffer;

@@ -44,4 +44,4 @@ pip3 list -o | cut -d \= -f 1 | xargs -n1 sudo -H pip3 install --user --upgrade;
 sudo periodic daily weekly monthly;
 sudo periodic . daily weekly monthly;
 sudo periodic .. daily weekly monthly;
-sudo shutdown -r now;
+echo "\n\nYou can reboot your Mac now.\n\n";
