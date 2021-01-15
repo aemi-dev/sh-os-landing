@@ -1,0 +1,79 @@
+aom				ilmbase				ocaml
+apr				imagemagick			oniguruma
+apr-util			ipython				opam
+argon2				isl				openblas
+aspell				jansson				opencore-amr
+atk				jasper				openexr
+autoconf			jemalloc			openjdk
+bash				jpeg				openjpeg
+bdw-gc				krb5				openldap
+bfg				lame				openssl@1.1
+bison				lapack				opus
+boost				leptonica			p11-kit
+brotli				libart				p7zip
+c-ares				libass				pango
+cairo				libbluray			pcre
+clang-format			libde265			pcre2
+cmake				libepoxy			perl
+cppcheck			libev				php
+cryptominisat			libevent			php-code-sniffer
+ctags				libffi				php-cs-fixer
+curl				libglade			pixman
+curl-openssl			libgnomecanvas			pkg-config
+cvc4				libheif				protobuf
+dav1d				libidn2				protobuf-c
+deno				liblqr				pypy
+docbook				libmetalink			python@3.7
+docbook-xsl			libmpc				python@3.8
+eprover				libogg				python@3.9
+ext4fuse			libomp				qemu
+ffmpeg				libpng				r
+fish				libpq				rav1e
+flac				libressl			readline
+fontconfig			libsamplerate			rtmpdump
+freetds				libsndfile			rubberband
+freetype			libsodium			ruby
+frei0r				libsoxr				sdl2
+fribidi				libssh				shared-mime-info
+gcc				libssh2				shyaml
+gd				libtasn1			snappy
+gdb				libtensorflow			speex
+gdbm				libtensorflow@1			sqlite
+gdk-pixbuf			libtiff				srt
+gerrit-tools			libtool				subversion
+gettext				libunistring			swift
+gh				libusb				swig
+ghostscript			libvidstab			tcl-tk
+giflib				libvorbis			tesseract
+git				libvpx				theora
+git-lfs				libxml2				tidy-html5
+glib				libyaml				unbound
+global				libzip				unixodbc
+gmp				little-cms2			utf8proc
+gnu-getopt			lua				vde
+gnutls				luarocks			vim
+gobject-introspection		lz4				webp
+graphite2			lzo				x264
+graphviz			mas				x265
+gsettings-desktop-schemas	mkcert				xmlto
+gtk+				mpfr				xvid
+gtk+3				ncurses				xz
+gtk-mac-integration		netpbm				yarn
+gtksourceview			nettle				youtube-dl
+gts				nghttp2				zeromq
+guile				ninja				zimg
+harfbuzz			nmap				zsh
+hicolor-icon-theme		node				zstd
+httpd				nspr
+icu4c				nss
+
+
+bitwarden                          freac                              microsoft-excel                    osxfuse                            the-unarchiver
+chromium                           google-backup-and-sync             microsoft-powerpoint               safeincloud-password-manager       transtype
+dash                               iina                               microsoft-teams                    sequel-pro                         unetbootin
+discord                            imageoptim                         microsoft-word                     signal                             visual-studio-code
+duet                               java                               motrix                             skype                              windscribe
+dupeguru                           keka                               netlogo                            skype-for-business                 xampp
+eqmac                              mediahuman-audio-converter         obs                                slack
+firefox-developer-edition          microsoft-auto-update              onedrive                           spotify
+forklift                           microsoft-edge                     onyx  
