@@ -87,12 +87,24 @@ then
 else
 	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}cleaning cache...${R_A}";
 	brew cleanup -s --quiet && brew cleanup --quiet && sudo rm -rfd "$(brew --cache)";
-	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}updating brew repository...${R_A}";
+	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}updating brew repository (1x)...${R_A}";
 	(brew update --force) &> /dev/null;
-	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}upgrading brew cli tools...${R_A}";
+	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}upgrading brew cli tools (1x)...${R_A}";
 	brew upgrade --quiet --force;
-	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}upgrading brew cask apps...${R_A}";
+	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}upgrading brew cask apps (1x)...${R_A}";
 	brew upgrade --quiet --force --cask --greedy;
+    eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}updating brew repository (2x)...${R_A}";
+	(brew update --force) &> /dev/null;
+	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}upgrading brew cli tools (2x)...${R_A}";
+	brew upgrade --quiet --force;
+	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}upgrading brew cask apps (2x)...${R_A}";
+	brew upgrade --quiet --force --cask;
+    eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}updating brew repository (3x)...${R_A}";
+	(brew update --force) &> /dev/null;
+	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}upgrading brew cli tools (3x)...${R_A}";
+	brew upgrade --quiet --force;
+	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}upgrading brew cask apps (3x)...${R_A}";
+	brew upgrade --quiet --force --cask;
 	eccho "${B_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${C_C}cleaning cache...${R_A}";
 	brew cleanup -s --quiet && brew cleanup --quiet && sudo rm -rfd "$(brew --cache)";
 	eccho "${G_C}==>${R_A} ${B_S}Executing Homebrew Routine${R_A} ${D_S}........${R_A} : ${G_C}Done.${R_A}";
