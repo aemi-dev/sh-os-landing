@@ -61,6 +61,11 @@ eccho "${B_C}==>${R_A} ${B_S}Purging Memory${R_A} ${D_S}....................${R_
 sudo purge;
 eccho "${G_C}==>${R_A} ${B_S}Purging Memory${R_A} ${D_S}....................${R_A} : ${G_C}Done.${R_A}";
 
+
+eccho "${B_C}==>${R_A} ${B_S}Updating system${R_A} ${D_S}...................${R_A} : ${Y_C}...${R_A}";
+(sudo softwareupdate --list --all --install --restart) &> /dev/null;
+eccho "${G_C}==>${R_A} ${B_S}Updating system${R_A} ${D_S}...................${R_A} : ${G_C}Done.${R_A}";
+
 eccho "${B_C}==>${R_A} ${B_S}Executing Periodic Scripts${R_A} ${D_S}........${R_A} : ${Y_C}...${R_A}";
 sudo periodic daily weekly monthly;
 sudo periodic . daily weekly monthly;
@@ -219,4 +224,7 @@ eccho "${G_C}==>${R_A} ${B_S}Updating Python 3.9 (Homebrew)${R_A} ${D_S}....${R_
 eccho "${B_C}==>${R_A} ${B_S}Purging Memory${R_A} ${D_S}....................${R_A} : ${Y_C}...${R_A}";
 sudo purge;
 eccho "${G_C}==>${R_A} ${B_S}Purging Memory${R_A} ${D_S}....................${R_A} : ${G_C}Done.${R_A}";
+
+
+
 eccho "${G_C}==>${R_A} ${B_S}Running Global Update Script${R_A} ${D_S}......${R_A} : ${G_C}Done.${R_A}";

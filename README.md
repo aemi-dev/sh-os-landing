@@ -1,4 +1,4 @@
-# Start install
+# OS Landing Resources
 
-```
-curl --proto '=https' https://raw.githubusercontent.com/originecode/macOS.config/master/postInstall.sh | sh```
+_Coming soon._
+
