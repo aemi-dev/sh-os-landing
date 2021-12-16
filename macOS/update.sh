@@ -140,7 +140,7 @@ then
 	eccho "${R_C}==>${R_A} ${B_S}Executing Yarn Routine${R_A} ${D_S}............${R_A} : ${R_C}yarn command not found.${R_A}";
 else
 	eccho "${B_C}==>${R_A} ${B_S}Executing Yarn Routine${R_A} ${D_S}............${R_A} : ${C_C}cleaning cache...${R_A}";
-	sudo yarn cache clean &> /dev/null;
+	ina &> /dev/null;
 	eccho "${G_C}==>${R_A} ${B_S}Executing Yarn Routine${R_A} ${D_S}............${R_A} : ${G_C}Done.${R_A}";
 fi
 
@@ -154,16 +154,16 @@ else
 	eccho "${G_C}==>${R_A} ${B_S}Updating rustup${R_A} ${D_S}...................${R_A} : ${G_C}Done.${R_A}";
 fi
 
-eccho "${B_C}==>${R_A} ${B_S}Updating Python 2.7 (macOS)${R_A} ${D_S}.......${R_A} : ${Y_C}...${R_A}";
-if ! command -v /usr/bin/python2.7 &> /dev/null;
-then
-	eccho "${R_C}==>${R_A} ${B_S}Updating Python 2.7 (macOS)${R_A} ${D_S}.......${R_A} : ${R_C}Failed.${R_A}";
-	eccho "${R_C}==>${R_A} ${B_S}Updating Python 2.7 (macOS)${R_A} ${D_S}.......${R_A} : ${R_C}python2.7 not found.${R_A}";
-else
-	(sudo /usr/bin/python2.7 -m pip install --no-python-version-warning --disable-pip-version-check --no-cache-dir --upgrade --user --no-warn-script-location --quiet pip) &> /dev/null;
-	(sudo /usr/bin/python2.7 -m pip list --outdated | grep '\.' | cut -d " " -f 1 | xargs -n1 sudo /usr/bin/python2.7 -m pip install --no-cache-dir --upgrade --user --no-warn-script-location --quiet) &> /dev/null;
-	eccho "${G_C}==>${R_A} ${B_S}Updating Python 2.7 (macOS)${R_A} ${D_S}.......${R_A} : ${G_C}Done.${R_A}";
-fi
+# eccho "${B_C}==>${R_A} ${B_S}Updating Python 2.7 (macOS)${R_A} ${D_S}.......${R_A} : ${Y_C}...${R_A}";
+# if ! command -v /usr/bin/python2.7 &> /dev/null;
+# then
+# 	eccho "${R_C}==>${R_A} ${B_S}Updating Python 2.7 (macOS)${R_A} ${D_S}.......${R_A} : ${R_C}Failed.${R_A}";
+# 	eccho "${R_C}==>${R_A} ${B_S}Updating Python 2.7 (macOS)${R_A} ${D_S}.......${R_A} : ${R_C}python2.7 not found.${R_A}";
+# else
+# 	(sudo /usr/bin/python2.7 -m pip install --no-python-version-warning --disable-pip-version-check --no-cache-dir --upgrade --user --no-warn-script-location --quiet pip) &> /dev/null;
+# 	(sudo /usr/bin/python2.7 -m pip list --outdated | grep '\.' | cut -d " " -f 1 | xargs -n1 sudo /usr/bin/python2.7 -m pip install --no-cache-dir --upgrade --user --no-warn-script-location --quiet) &> /dev/null;
+# 	eccho "${G_C}==>${R_A} ${B_S}Updating Python 2.7 (macOS)${R_A} ${D_S}.......${R_A} : ${G_C}Done.${R_A}";
+# fi
 
 eccho "${B_C}==>${R_A} ${B_S}Updating Python 3 (macOS)${R_A} ${D_S}.........${R_A} : ${Y_C}...${R_A}";
 if ! command -v /usr/bin/python3 &> /dev/null;
@@ -220,6 +220,18 @@ else
 	(sudo /usr/local/opt/python@3.9/bin/python3 -m pip --no-python-version-warning --disable-pip-version-check list --outdated | grep '\.' | cut -d " " -f 1 | xargs -n1 sudo /usr/local/opt/python@3.9/bin/python3 -m pip --no-python-version-warning --disable-pip-version-check install --no-cache-dir --upgrade --user --no-warn-script-location --quiet) &> /dev/null;
 fi
 eccho "${G_C}==>${R_A} ${B_S}Updating Python 3.9 (Homebrew)${R_A} ${D_S}....${R_A} : ${G_C}Done.${R_A}";
+
+
+eccho "${B_C}==>${R_A} ${B_S}Updating Python 3.10 (Homebrew)${R_A} ${D_S}...${R_A} : ${Y_C}...${R_A}";
+if ! command -v /usr/local/opt/python@3.10/bin/python3 &> /dev/null;
+then
+	eccho "${R_C}==>${R_A} ${B_S}Updating Python 3.10 (Homebrew)${R_A} ${D_S}...${R_A} : ${R_C}Failed.${R_A}";
+	eccho "${R_C}==>${R_A} ${B_S}Updating Python 3.10 (Homebrew)${R_A} ${D_S}...${R_A} : ${R_C}python3.10 not found.${R_A}";
+else
+	(sudo /usr/local/opt/python@3.10/bin/python3 -m pip --no-python-version-warning --disable-pip-version-check install --no-cache-dir --upgrade --user --no-warn-script-location --quiet pip) &> /dev/null;
+	(sudo /usr/local/opt/python@3.10/bin/python3 -m pip --no-python-version-warning --disable-pip-version-check list --outdated | grep '\.' | cut -d " " -f 1 | xargs -n1 sudo /usr/local/opt/python@3.10/bin/python3 -m pip --no-python-version-warning --disable-pip-version-check install --no-cache-dir --upgrade --user --no-warn-script-location --quiet) &> /dev/null;
+fi
+eccho "${G_C}==>${R_A} ${B_S}Updating Python 3.10 (Homebrew)${R_A} ${D_S}...${R_A} : ${G_C}Done.${R_A}";
 
 eccho "${B_C}==>${R_A} ${B_S}Purging Memory${R_A} ${D_S}....................${R_A} : ${Y_C}...${R_A}";
 sudo purge;
