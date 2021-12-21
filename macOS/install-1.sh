@@ -6,7 +6,7 @@ sudo periodic daily weekly monthly;
 sudo periodic . daily weekly monthly;
 sudo periodic .. daily weekly monthly;
 sudo purge;
-sudo touch .path.bak;
+touch $HOME/.path.bak;
 sudo echo $PATH >> ~/.path.bak;
 sudo purge;
 
@@ -27,49 +27,80 @@ sudo purge;
 sudo purge;
 
 # Make some foreign cask available
-homebrew/aliases
-homebrew/autoupdate
-homebrew/bundle
-homebrew/cask
-homebrew/cask-drivers
-homebrew/cask-fonts
-homebrew/cask-versions
-buo/cask-upgrade
-homebrew/core
-homebrew/command-not-found
-homebrew/services
-homebrew/test-bot
-github/gh
-cvc4/cvc4
-snyk/tap
-wpscanteam/tap
+brew tap homebrew/aliases;
+brew tap homebrew/autoupdate;
+brew tap homebrew/bundle;
+brew tap homebrew/cask;
+brew tap homebrew/cask-drivers;
+brew tap homebrew/cask-fonts;
+brew tap homebrew/cask-versions;
+brew tap buo/cask-upgrade;
+brew tap homebrew/core;
+brew tap homebrew/command-not-found;
+brew tap homebrew/services;
+brew tap homebrew/test-bot;
+brew tap github/gh;
+brew tap snyk/tap;
+brew tap wpscanteam/tap;
 sudo purge;
 
 # Terminal Shell
-brew install fish bash zsh curl wget;
+brew install fish;
+brew install bash;
+brew install zsh;
+brew install curl;
+brew install wget;
 
 # macOS Related
 brew install mas;
 
 # Install basic packages
-brew install gcc git git-lfs cmake clang-format gdbm;
+brew install gcc;
+brew install git;
+brew install git-lfs;
+brew install cmake;
+brew install clang-format;
+brew install gdbm;
 
 sudo purge;
 
 # JS Related
-brew install node deno yarn;
+brew install node;
+brew install deno;
+brew install yarn;
 
 # PHP Related
 brew install composer;
 
 # Install some basic npm packages
-sudo npm install -g npm chai clean-css documentation eslint growl jsdoc jshint mocha npm nodemon nvm playwright terser vue;
+sudo npm install -g npm chai clean-css documentation eslint growl jsdoc jshint mocha nodemon playwright terser vue;
 sudo purge;
 
-# Install some basics brew-core
-brew install python@3.10 python@3.9 python@3.8 python@3.7;
-brew install ipython ruby rust ocaml jupyterlab;
-brew install youtube-dl webp woff2 mkcert mysql httpd ffmpeg lame nmap openssl openssl@1.1 openssl@3 snyk swift openssh;
+# Install some basics
+brew install python@3.10;
+brew install python@3.9;
+brew install python@3.8;
+brew install python@3.7;
+brew install ipython;
+brew install ruby;
+brew install rust;
+brew install ocaml;
+brew install jupyterlab;
+brew install youtube-dl;
+brew install webp;
+brew install woff2;
+brew install mkcert;
+brew install mysql;
+brew install httpd;
+brew install ffmpeg;
+brew install lame;
+brew install nmap;
+brew install openssl;
+brew install openssl@1.1;
+brew install openssl@3;
+brew install snyk;
+brew install swift;
+brew install openssh;
 sudo purge;
 
 sudo echo "/usr/local/bin/fish" >> /etc/shells;
@@ -123,18 +154,24 @@ mas install 985367838; # Microsoft Outlook
 mas install 408981434; # iMovie
 mas install 409203825; # Numbers
 mas install 409183694; # Keynote
+mas install 1464122853; # NextDNS
 sudo purge;
 
 # VPN
 brew install openvpn;
-brew install --cask nextdns openvpn-connect windscribe lulu netiquette;
+brew install --cask openvpn-connect;
+brew install --cask windscribe;
+brew install --cask lulu;
+brew install --cask netiquette;
 
 # Clouds
-brew install --cask google-drive dropbox;
+brew install --cask google-drive;
+brew install --cask dropbox;
 sudo purge;
 
 # Basic Needs
-brew install --cask macfuse openjdk;
+brew install --cask macfuse;
+brew install --cask openjdk;
 sudo purge;
 
 # Editors
@@ -142,15 +179,33 @@ brew install --cask visual-studio-code;
 sudo purge;
 
 # Virtualization
-brew install --cask virtualbox virtualbox-extension-pack utm;
+brew install --cask virtualbox;
+brew install --cask virtualbox-extension-pack;
 sudo purge;
 
 # System tools
-brew install -- cask maintenance appcleaner macs-fan-control turbo-boost-switcher fig xquartz;
+brew install --cask maintenance;
+brew install --cask appcleaner;
+brew install --cask macs-fan-control;
+brew install --cask turbo-boost-switcher;
+brew install --cask fig;
+brew install --cask xquartz;
 sudo purge;
 
 # Useful Tools
-brew install --cask forklift dash iina imageoptim calibre deepl netnewswire audacity obs camo-studio jabra-direct logitech-g-hub;
+brew install --cask forklift;
+brew install --cask dash;
+brew install --cask;
+brew install --cask iina;
+brew install --cask imageoptim;
+brew install --cask calibre;
+brew install --cask deepl;
+brew install --cask netnewswire;
+brew install --cask audacity;
+brew install --cask obs;
+brew install --cask camo-studio;
+brew install --cask jabra-direct;
+brew install --cask logitech-g-hub;
 sudo purge;
 
 # Motrix
@@ -158,14 +213,25 @@ brew install --cask motrix;
 sudo purge;
 
 # Messengers
-brew install --cask discord element microsoft-teams session;
+brew install --cask discord;
+brew install --cask element;
+brew install --cask microsoft-teams;
+brew install --cask session;
 sudo purge;
 
 # Browsers
-brew install --cask google-chrome microsoft-edge firefox-nightly firefox-developer-edition brave-browser eloston-chromium safari-technology-preview;
+brew install --cask google-chrome;
+brew install --cask microsoft-edge;
+brew install --cask firefox-nightly;
+brew install --cask firefox-developer-edition;
+brew install --cask brave-browser;
+brew install --cask eloston-chromium;
+brew install --cask safari-technology-preview;
 sudo purge;
 
-brew install sf-symbols font-inter font-jetbrains-mono;
+brew install sf-symbols;
+brew install font-inter;
+brew install font-jetbrains-mono;
 sudo purge;
 
 cargo install amp;
@@ -184,6 +250,3 @@ mkdir -p ~/Code
 sudo purge;
 
 sudo ln -s ~/Code/sh-os-landing/macOS/update.sh ~/.u;
-
-
-# sh update.sh;
