@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/local/bin/bash
 
 # Echo wrapping flag
 ECHO_WRAPPING=1;
@@ -78,8 +78,8 @@ then
 	eccho "${R_C}==>${R_A} ${B_S}Updating Apps from Mac AppStore${R_A} ${D_S}...${R_A} : ${R_C}Failed.${R_A}";
 	eccho "${R_C}==>${R_A} ${B_S}Updating Apps from Mac AppStore${R_A} ${D_S}...${R_A} : ${R_C}mas command not found.${R_A}";
 else
-	sudo mas upgrade;
-	(sudo mas outdated | grep '\(' | cut -d " " -f 1 | xargs -n1 sudo mas upgrade) &> /dev/null;
+	mas upgrade;
+	(mas outdated | grep '\(' | cut -d " " -f 1 | xargs -n1 mas upgrade) &> /dev/null;
 	eccho "${B_C}==>${R_A} ${B_S}Updating Apps from Mac AppStore${R_A} ${D_S}...${R_A} : ${G_C}Done.${R_A}";
 fi
 
